@@ -1,5 +1,6 @@
 class Store < ActiveRecord::Base
   has_many :items
+  has_many :orders
 
   validates :slug, uniqueness: true, presence: true
   validates :name, presence: true

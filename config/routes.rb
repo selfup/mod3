@@ -9,3 +9,7 @@ Rails.application.routes.draw do
     resources :items
   end
 end
+
+# namespace :stores, path: ":store", as: :store do
+#   resources :items, path: ":item"
+# end

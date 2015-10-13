@@ -3,5 +3,5 @@ class Stores::ItemsController < Stores::StoresController
     @items = current_store.items
   end
 
-  #private current_store method is in the Stores::StoreController
+  # private current_store method is in the Stores::StoreController
 end

@@ -1,0 +1,6 @@
+<div class="container">
+  <h3> <% current_store.orders.each do |order| %></h3>
+    <p><%= order.id %></p>
+    <p> <%= order.user.name %>
+  <% end %>
+</div>

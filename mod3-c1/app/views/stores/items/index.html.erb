@@ -1,0 +1,7 @@
+<div class="container">
+  <h3>Welcome to <%= current_store.name %></h3>
+  <% current_store.items.each do |item| %>
+    <h4><%= item.name %></h4>
+    <p>item.description</p>
+  <% end %>
+</div>

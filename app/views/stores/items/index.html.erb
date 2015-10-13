@@ -1,0 +1,7 @@
+<div class="container">
+  <h3>Welcome to <%= @store.name %></h3>
+  <% @items.each do |item| %>
+    <h4><%= item.name %></h4>
+    <p>item.description</p>
+  <% end %>
+</div>

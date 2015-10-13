@@ -15577,3 +15577,257 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-13 11:41:52 -0600
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-13 11:41:52 -0600
+
+
+Started GET "/regis-crepes/orders" for 127.0.0.1 at 2015-10-13 11:44:45 -0600
+Processing by Stores::OrdersController#index as HTML
+  Parameters: {"store"=>"regis-crepes"}
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT  "stores".* FROM "stores"  WHERE "stores"."slug" = 'regis-crepes' LIMIT 1[0m
+  Rendered stores/orders/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 11ms
+
+SyntaxError (/Users/RJPB/Documents/444/multitenancy/mod3-c1/app/views/stores/orders/index.html.erb:4: syntax error, unexpected ')', expecting '('
+...output_buffer.append=( order. );@output_buffer.safe_append='
+...                               ^
+/Users/RJPB/Documents/444/multitenancy/mod3-c1/app/views/stores/orders/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/RJPB/Documents/444/multitenancy/mod3-c1/app/views/stores/orders/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/RJPB/Documents/444/multitenancy/mod3-c1/app/views/stores/orders/index.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/stores/orders/index.html.erb:4: syntax error, unexpected ')', expecting '('
+  app/views/stores/orders/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+  app/views/stores/orders/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/stores/orders/index.html.erb:10: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.9ms)
+
+
+Started GET "/regis-crepes/orders" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+Processing by Stores::OrdersController#index as HTML
+  Parameters: {"store"=>"regis-crepes"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT  "stores".* FROM "stores"  WHERE "stores"."slug" = 'regis-crepes' LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 37]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered stores/orders/index.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 105.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/stores/items.css?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/stores/orders.css?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/stores/items.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/stores/orders.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-13 11:45:04 -0600
+
+
+Started GET "/regis-crepes/orders" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+Processing by Stores::OrdersController#index as HTML
+  Parameters: {"store"=>"regis-crepes"}
+  [1m[35mStore Load (0.2ms)[0m  SELECT  "stores".* FROM "stores"  WHERE "stores"."slug" = 'regis-crepes' LIMIT 1
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 37]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered stores/orders/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_store.html.erb (1.1ms)
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/stores/orders.css?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/stores/items.css?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/stores/items.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/stores/orders.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-13 11:50:57 -0600

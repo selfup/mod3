@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 
   namespace :stores, path: ":store", as: :store do
     resources :items
+    resources :orders
   end
+
+
 end
 
 # namespace :stores, path: ":store", as: :store do

@@ -19,6 +19,8 @@ class PermissionsService
     return true if controller == "items"
     return true if controller == "orders"
     return true if controller == "users"
+    return true if controller == "stores"
+    return true if controller == "sessions"
   end
 
   def guest_user_permissions(controller, action)

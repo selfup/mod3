@@ -14,8 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_permission
-    @current_permission ||= PermissionsService.new(current_user).
-                            allow?(params[:controller], params[:action])
+    @current_permission ||= PermissionsService.new(current_user)
   end
 
   # passing controller and action
@@ -23,5 +22,9 @@ class ApplicationController < ActionController::Base
     unless current_permission
       redirect_to root_url, danger: "Stranger Danger!"
     end
+  end
+
+  def authorized?
+    current_permission.allow?(params[:controller], params[:action])
   end
 end

@@ -23067,3 +23067,147 @@ Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2015-10-14 10:34:31 -060
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-14 10:34:31 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-14 10:36:36 -0600
+
+SyntaxError (/Users/RJPB/Documents/444/multitenancy/mod3-c2/app/controllers/application_controller.rb:29: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/application_controller.rb:29: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/stores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-14 10:36:43 -0600
+Processing by StoresController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "stores"
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 10]]
+  Rendered stores/index.html.erb within layouts/application (31.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_notices.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 123.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/layouts.css?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-14 10:36:44 -0600

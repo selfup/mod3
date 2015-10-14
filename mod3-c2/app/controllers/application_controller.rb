@@ -15,5 +15,6 @@ class ApplicationController < ActionController::Base
   def authorize!
     unless PermissionsService.new(current_user).allow?(params[:controller], params[:action])
       redirect_to root_url, danger: "Stranger Danger!"
+    end
   end
 end

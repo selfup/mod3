@@ -13,10 +13,17 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-  # passing controller and action
+  def current_permission
+    @current_permission ||= PermissionsService.new(current_user)
+  end
+
   def authorize!
-    unless PermissionsService.new(current_user).allow?(params[:controller], params[:action])
-      redirect_to root_url
+    unless authorized?
+      redirect_to root_path, danger: "Stranger Danger!"
     end
+  end
+
+  def authorized?
+    current_permission.allow?(params[:controller], params[:action])
   end
 end

@@ -6,6 +6,7 @@ class PermissionsService
   end
 
   def allow?(controller, action)
-    true
+    return true if controller == "stores"
+    return true if controller == "sessions"
   end
 end

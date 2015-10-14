@@ -6,6 +6,8 @@ class PermissionsService
   end
 
   def allow?(controller, action)
+    @controller = controller
+    @action = action
     case
     when user && user.platform_admin?
       platform_admin_permissions(controller, action)

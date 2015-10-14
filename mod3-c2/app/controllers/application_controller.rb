@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize!
-    unless current_permission
+    unless authorized?
       redirect_to root_path, danger: "Stranger Danger!"
     end
   end

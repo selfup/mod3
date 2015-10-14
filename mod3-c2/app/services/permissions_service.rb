@@ -6,7 +6,8 @@ class PermissionsService
   end
 
   def allow?(controller, action)
-    if user && user.platform_admin?
+    case
+    when user && user.platform_admin?
       platform_admin_permissions(controller, action)
     else
       guest_user_permissions(controller, action)

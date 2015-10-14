@@ -17,10 +17,9 @@ class ApplicationController < ActionController::Base
     @current_permission ||= PermissionsService.new(current_user)
   end
 
-  # passing controller and action
   def authorize!
     unless current_permission
-      redirect_to root_url, danger: "Stranger Danger!"
+      redirect_to root_path, danger: "Stranger Danger!"
     end
   end
 

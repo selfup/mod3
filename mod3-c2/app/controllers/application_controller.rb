@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :authorize!
+
   add_flash_types :success, :info, :warning, :danger
 
   helper_method :current_user
@@ -14,7 +16,7 @@ class ApplicationController < ActionController::Base
   # passing controller and action
   def authorize!
     unless PermissionsService.new(current_user).allow?(params[:controller], params[:action])
-      redirect_to root_url, danger: "Stranger Danger!"
+      redirect_to root_url
     end
   end
 end

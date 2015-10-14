@@ -14031,3 +14031,190 @@ Binary data inserted for `string` type on column `password_digest`
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "roles" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-10-14 15:23:18.850334"], ["name", "registered_user"], ["updated_at", "2015-10-14 15:23:18.850334"]]
   [1m[35m (1.2ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-14 10:01:06 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoresController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "stores"
+  [1m[36mStore Load (0.1ms)[0m  [1mSELECT "stores".* FROM "stores"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 5]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 5]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 5]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 6]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 8]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 8]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 10]]
+  Rendered stores/index.html.erb within layouts/application (40.9ms)
+  Rendered layouts/_navbar.html.erb (13.1ms)
+Completed 500 Internal Server Error in 256ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x007fbfb5014038>:0x007fbfb5006e60>):
+    24:       </li>
+    25:     </ul>
+    26:     <ul class="nav navbar-nav navbar-right">
+    27:       <% if current_user %>
+    28:         <li>
+    29:           <%= link_to 'Logout', logout_path, method: :delete %>
+    30:         </li>
+  app/views/layouts/_navbar.html.erb:27:in `_app_views_layouts__navbar_html_erb__4189836934572435435_70230690634940'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___2733757440816984701_70230678622940'
+
+
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/RJPB/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+Processing by StoresController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "stores"[0m
+  [1m[35mStore Load (0.1ms)[0m  SELECT "stores".* FROM "stores"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 5]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 6]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 7]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 8]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?[0m  [["store_id", 9]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?  [["store_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?[0m  [["store_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"  WHERE "items"."store_id" = ?  [["store_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "orders"  WHERE "orders"."store_id" = ?[0m  [["store_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"  WHERE "users"."store_id" = ?  [["store_id", 10]]
+  Rendered stores/index.html.erb within layouts/application (28.2ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_notices.html.erb (0.4ms)
+Completed 200 OK in 130ms (Views: 117.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/layouts.css?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:27 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-14 10:01:28 -0600
